@@ -1,0 +1,19 @@
+First Equations:
+1000x + y = 1001
+998x + y = 999
+
+
+(1000x + y) - (998x + y) = 1001 - 999
+2x = 2
+x = 1
+1000(1) + y = 1001
+y = 1
+
+Second Equations (with measurement error):
+1000x + y = 1001
+999x + y = 999
+
+(1000x + y) - (999x + y) = 1001 - 999
+x = 2
+1000(2) + y = 1001
+y = -999

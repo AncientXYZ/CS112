@@ -1,0 +1,113 @@
+FileSys.java Part 1 Testing Record
+
+Introduction:
+This document outlines basic testing of the FileSys.java program, aimed at verifying the program's ability to correctly handle commands and errors.
+
+Testing Method:
+Commands were manually entered via the command line to observe the program's responses and verify the accuracy of error handling.
+
+Test Cases and Results:
+
+1. Input: "create"
+   Expected Output: ERROR: Missing file name.
+   Actual Output: ERROR: Missing file name.
+   Result: Passed
+
+2. Input: "cat"
+   Expected Output: ERROR: Missing file name.
+   Actual Output: ERROR: Missing file name.
+   Result: Passed
+
+3. Input: "rm"
+   Expected Output: ERROR: Missing file name.
+   Actual Output: ERROR: Missing file name.
+   Result: Passed
+
+4. Input: "mkdir"
+   Expected Output: ERROR: Missing directory name.
+   Actual Output: ERROR: Missing directory name.
+   Result: Passed
+
+5. Input: "cd"
+   Expected Output: ERROR: Missing directory name.
+   Actual Output: ERROR: Missing directory name.
+   Result: Passed
+
+6. Input: "ls"
+    Expected Output: ERROR: Ls command not complete yet.
+    Actual Output: ERROR: Ls command not complete yet.
+    Result: Passed
+
+7. Input: "du"
+    Expected Output: ERROR: Du command not complete yet.
+    Actual Output: ERROR: Du command not complete yet.
+    Result: Passed
+
+8. Input: "pwd"
+    Expected Output: ERROR: Pwd command not complete yet.
+    Actual Output: ERROR: Pwd command not complete yet.
+    Result: Passed
+
+9. Input: "find"
+    Expected Output: ERROR: Missing file or directory name.
+    Actual Output: ERROR: Missing file or directory name.
+    Result: Passed
+
+
+
+FileSys.java Part 2 Testing Record
+
+Introduction:
+This document continues from Part 1 and introduces additional testing of the FileSys.java program for Part 2, focusing on verifying the program's functionality and error handling with more complex command scenarios.
+
+Testing Method:
+Commands were manually entered via the command line to observe the program's responses. The test checks both the correctness of the implemented commands and the error handling capabilities.
+
+Test Cases and Results:
+
+10. Command Sequence Test
+      mkdir newDir
+      cd newDir
+      create testFile 
+      Hello, this is a test.
+      ~
+      cat testFile
+      rm testFile
+      cd ..
+      rmdir newDir
+
+      Expected Output:
+      Directory 'newDir' created.
+      File 'testFile' created.
+      Hello, this is a test.
+      File 'testFile' removed.
+      Directory 'newDir' and all its contents removed.
+      
+    Actual Output: As expected 
+    Result: Passed
+
+11. Error Handling with Non-Existent Directory Access
+    Input: cd nonExistentDir
+    Expected Output: ERROR: Directory does not exist.
+    Actual Output: ERROR: Directory does not exist.
+    Result: Passed
+
+12. Attempt to Remove Non-Existent File
+    Input: rm ghostFile
+    Expected Output: ERROR: File does not exist or is a directory.
+    Actual Output: ERROR: File does not exist or is a directory.
+    Result: Passed
+
+13. Find function test
+    create filea
+    this is a file
+    ~
+    find filea
+
+    Expeted Output:
+    /root/filea
+    
+    Actual Output: As expected 
+    Result: Passed
+    
+
